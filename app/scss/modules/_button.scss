@@ -1,0 +1,36 @@
+.btn-holder {
+    margin-top: 46px;
+    display: flex;
+
+    li {
+        margin-right: 10px;
+    }
+}
+
+.btn {
+    text-transform: uppercase;
+    font-size: 20px;
+    text-decoration: none;
+    display: inline-block;
+    color: $colorMain;
+    padding: 12px 24px;
+    border: 1px solid $colorMain;
+    border-radius: 100px;
+    transition: all .4s ease-in-out;
+    background: transparent;
+
+    &--blue {
+        background-image: linear-gradient(to right, $colorBlueLight, $colorBlueDark);
+        box-shadow: 2px 4px 5px rgba(0, 0, 0, 0.3);
+        color: $colorWhite;
+        font-weight: bold;
+        background-size: 220%;
+        backface-visibility: hidden;
+
+        &:hover {
+            box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.3);
+            background-image: linear-gradient(120deg, transparent 0%, transparent 50%, $colorBlueDark 50%);
+            background-position: 99%;
+        }
+    }
+}

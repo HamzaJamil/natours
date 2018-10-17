@@ -1,0 +1,52 @@
+.hero-section {
+    background: url('../images/hero-section-bg.jpg') no-repeat center/cover;
+    // background-size: cover;
+
+    &__row {
+
+        @include respond(atMedium) {
+
+            display: flex;
+            flex-flow: row wrap;
+            padding: 96px 0 97px 71px;
+            position: relative;
+        }
+    }
+
+    &__content {
+        @include respond(atMedium) {
+            flex: 0 0 565px;
+        }
+    }
+
+    &__heading {
+        color: $colorBlue;
+        font-size: 70px;
+        line-height: 1.2;
+        text-transform: uppercase;
+        margin: 0;
+    }
+
+    &__subtitle {
+        font-size: 21px;
+        color: $colorMain;
+        margin: 0 0 20px;
+    }
+
+    &__description p {
+        color: #175aae;
+        font-size: 20px;
+    }
+
+    &__img {
+
+
+        @include respond(atMedium) {
+            position: absolute;
+            top: 10px;
+            right: 0;
+        }
+
+    }
+
+}

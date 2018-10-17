@@ -1,0 +1,126 @@
+/* Industries */
+.industries-section {
+    display: flex;
+    flex-direction: column;
+
+    @include respond(atMedium) {
+        flex-direction: row;
+    }
+
+    &__item {
+        flex: 1;
+        padding: 20px;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+
+        @include respond(atMedium) {
+
+            &:not(:last-child) {
+                border-right: 1px solid $colorMain;
+            }
+        }
+
+
+        img {
+            display: block;
+            width: 50px;
+            margin-bottom: 10px;
+        }
+
+        span {
+            display: block;
+        }
+    }
+
+}
+
+/* Services */
+.services-section {
+
+    @include respond(atMedium) {
+        display: flex;
+        align-items: center;
+
+        &:nth-child(odd) {
+            flex-direction: row-reverse;
+
+        }
+
+    }
+
+    &__item {
+        flex: 1;
+        padding: 60px;
+
+        &:nth-child(odd) {
+            text-align: center;
+        }
+
+
+    }
+
+}
+
+// News Section
+.news-section {
+    @include respond(atMedium) {
+
+        display: flex;
+    }
+
+    &__item {
+        @include respond(atMedium) {
+            padding: 20px;
+        }
+
+        span {
+            color: $colorBlue;
+        }
+    }
+}
+
+//  Contact Us Section
+.contact-us-section {
+
+    .contact-btn-holder {
+        padding: 10px 0;
+        text-align: center;
+    }
+}
+
+// footer
+.footer {
+    &--container {
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        @include respond(atMedium) {
+            flex-direction: row;
+            justify-content: space-between;
+        }
+
+    }
+
+    &-nav {
+        @include respond(atMedium) {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+        }
+    }
+
+    &-nav__links {
+        @include respond(atMedium) {
+            display: flex;
+
+            & li:not(:last-child) {
+                margin-right: 15px;
+            }
+        }
+    }
+}
